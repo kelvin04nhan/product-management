@@ -1,4 +1,4 @@
-.header .inner-menu > ul {
+/* .header .inner-menu > ul {
 
     list-style: none;
     padding: 0;
@@ -14,9 +14,167 @@
 }
 
 /* End header */
-.footer {
+/* .footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
+} */ 
+/* Container styling */
+/* Header styling */
+header.header {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Container within the header */
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Row styling */
+.header .row.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo column styling */
+.header .col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.inner-logo a {
+    display: block;
+}
+
+.inner-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Menu column styling */
+.header .col-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.inner-menu {
+    text-align: right; /* Align menu items to the right */
+}
+
+.inner-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inner-menu ul li {
+    margin-left: 20px;
+}
+
+.inner-menu ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333; /* Darker gray for text */
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.inner-menu ul li a:hover {
+    color: #007bff; /* Blue color on hover */
+}
+
+.container.my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Row styling */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Column styling */
+.col-12, .col-4 {
+    position: relative;
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+/* Specific column widths */
+.col-4 {
+    width: 33.33333%;
+}
+
+/* Box head styling */
+.box-head {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.box-head h2.inner-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Product item styling */
+.product-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-item .inner-content {
+    padding: 10px 0;
+}
+
+.product-item h3.inner-content {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.inner-price-new {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.inner-price-old {
+    font-size: 1rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.inner-discount {
+    font-size: 1rem;
+    color: #27ae60;
+    margin-left: 10px;
+}
+
+/* Product item hover effect */
+.product-item:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
 }
