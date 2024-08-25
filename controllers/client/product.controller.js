@@ -5,17 +5,22 @@ module.exports.index = async (req, res)=>{
 
 
     const products = await Product.find({
-        status: "active",
-        deleted: false
+        // status: "active",
+        // deleted: false
     })
 
-    const newProduct = products.forEach(item => {
-        item.priceNew = item.price *(100 - item.discountPercentage) 
-    });
-    console.log(products)
+    // const newProduct = products.forEach(item => {
+    //     item.priceNew = item.price *(100 - item.discountPercentage) 
+    // });
+
+    const newProducts = products.map(item => {
+        item.priceNew = (item.price*(100 - item.discountPercentage)/100).toFixed(0);
+        return item;
+    })
+    console.log(newProducts)
     res.render('client/pages/products/index', {
         pageTitle: "TRANG DANH SACH SAN PHAM",
-        products: products
+        products: newProducts
     })
 
 }
