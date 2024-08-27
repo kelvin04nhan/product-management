@@ -15,44 +15,48 @@ block main
         th Trạng thái 
         th Hành động
     tbody
-      tr
-        td 1
+      each item, index in products
+        tr
+            td #{index + 1}
+            
+            td
+                img(src=item.thumbnail, alt="", srcset="")
+            td #{item.title}
+            td #{item.price}$
+            td
+                if(item.status == "active")
+                    a(href="#" class="badge badge-success") Hoạt động
+                else
+                    a(href="#" class="badge badge-danger") Dừng hoạt động
+
+            td 
+                button(class="btn btn-warning bth-sm") Sửa
+
+                button(class="btn btn-danger btn-sm ml-1") Xóa
+    //-   tr
+    //-     td 2
         
-        td
-            img(src="", alt="", srcset="")
-        td Sản phẩm 1
-        td 100$
-        td
-            a(href="#" class="badge badge-success") Hoạt động
+    //-     td
+    //-         img(src="", alt="", srcset="")
+    //-     td Sản phẩm 2
+    //-     td 100$
+    //-     td
+    //-         a(href="#" class="badge badge-danger") Dừng hoạt động
 
-        td 
-            button(class="btn btn-warning bth-sm") Sửa
+    //-     td 
+    //-         button(class="btn btn-warning bth-sm") Sửa
 
-            button(class="btn btn-danger btn-sm ml-1") Xóa
-      tr
-        td 2
-        
-        td
-            img(src="", alt="", srcset="")
-        td Sản phẩm 2
-        td 100$
-        td
-            a(href="#" class="badge badge-danger") Dừng hoạt động
+    //-         button(class="btn btn-danger btn-sm ml-1") Xóa
+    //-   tr
+    //-     td 3
+    //-     td
+    //-         img(src="", alt="", srcset="")
+    //-     td Sản phẩm 3
+    //-     td 100$
+    //-     td
+    //-         a(href="#" class="badge badge-danger") Dừng hoạt động
 
-        td 
-            button(class="btn btn-warning bth-sm") Sửa
+    //-     td 
+    //-         button(class="btn btn-warning bth-sm") Sửa
 
-            button(class="btn btn-danger btn-sm ml-1") Xóa
-      tr
-        td 3
-        td
-            img(src="", alt="", srcset="")
-        td Sản phẩm 3
-        td 100$
-        td
-            a(href="#" class="badge badge-danger") Dừng hoạt động
-
-        td 
-            button(class="btn btn-warning bth-sm") Sửa
-
-            button(class="btn btn-danger btn-sm ml-1") Xóa
+    //-         button(class="btn btn-danger btn-sm ml-1") Xóa
