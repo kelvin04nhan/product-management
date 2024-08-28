@@ -1,4 +1,4 @@
-// console.log("OKE IM HERE")
+console.log("OKE IM HERE")
 // xử lý button status
 // thuộc tính tự định nghĩa dấu []
 const buttonStatus = document.querySelectorAll("[button-status]")
